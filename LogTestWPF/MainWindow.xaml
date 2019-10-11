@@ -1,0 +1,40 @@
+﻿<Window x:Class="LogTestWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogTestWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="GeneralGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="0" x:Name="dataScroll1" CanContentScroll="True" Height="auto">
+            <GroupBox x:Name="Settings" Header="Настройки" Padding="5">
+                <StackPanel x:Name="stackPanelSettings">
+                    <TextBox x:Name="textBoxTime" HorizontalAlignment="Left" Height="25" Margin="3,8,0,0" TextWrapping="Wrap" Text="Time(0-5400)" VerticalAlignment="Top" Width="90"/>
+                    <TextBox x:Name="textBoxScore" HorizontalAlignment="Left" Height="25" Margin="3,8,35,35" TextWrapping="Wrap" Text="Score(x1-x2) " VerticalAlignment="Top" Width="90"/>
+                    <Button x:Name="submitButton" Content="Submit" HorizontalAlignment="Left" Height="25" Margin="3,8,0,0" Width="90" RenderTransformOrigin="0.589,-1.24"/>
+
+                </StackPanel>
+            </GroupBox>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="1" x:Name="dataScroll2" CanContentScroll="True" Height="auto">
+            <GroupBox x:Name="probabilityAssessment" Header="Оценка вероятности" Padding="5">
+                <StackPanel x:Name="stackPanelProbabilityAssessment">
+
+                </StackPanel>
+            </GroupBox>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="2" x:Name="dataScroll" CanContentScroll="True" Height="auto">
+            <GroupBox x:Name="viewData" Header="Исходные данные" Padding="5">
+                <StackPanel x:Name="stackPanelViewData">
+
+                </StackPanel>
+            </GroupBox>
+        </ScrollViewer>
+    </Grid>
+</Window>
